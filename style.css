@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#turno {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#jogador-atual {
+    font-weight: bold;
+    color: #00ff99;
+}
+
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.celula {
+    width: 100px;
+    height: 100px;
+    background-color: #1E1E2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.celula:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.celula.vencedora {
+    background-color: gold !important;
+    animation: piscar 1s infinite alternate;
+}
+
+#keyframes piscar {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+#placar {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff99;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #00cc77;
+}
+
+#media (max-width: 500px)
+
+#tabuleiro {
+        grid-template-columns: repeat(3, 70px);
+        grid-gap 5px ;
+    }
+    .celula {
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }

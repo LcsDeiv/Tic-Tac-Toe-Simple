@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 JVL </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Jogo da Velha "Tic-Tac-Toe"</h1>
+        <div id="turno">Vez do jogador: <span id="jogador-atual">X</span></div>
+        <div id="tabuleiro">
+            <div class="celula" data-index="0"></div>
+            <div class="celula" data-index="1"></div>
+            <div class="celula" data-index="2"></div>
+            <div class="celula" data-index="3"></div>
+            <div class="celula" data-index="4"></div>
+            <div class="celula" data-index="5"></div>
+            <div class="celula" data-index="6"></div>
+            <div class="celula" data-index="7"></div>
+            <div class="celula" data-index="8"></div>
+        </div>
+        <div id="placar">
+            <span>X: <span id="placar-x">0</span></span> |
+            <span>O: <span id="placar-o">0</span></span> |
+            <span>Empates: <span id="placar-empates">0</span></span>
+        </div>
+        <button id="resetar">🔄 Reiniciar Tudo</button>
+    </div>
+
+    <audio id="som-clique" src="click.wav.wav"></audio>
+    <audio id="som-vitoria" src="win.wav.wav"></audio>
+    <audio id="som-empate" src="draw.wav.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
